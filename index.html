@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="sk">
 
 <head>
-  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+
+  <title>Trojka reštaurácia & pub</title>
+  <meta name="description" content="Objednajte si jedlo jednoducho online." />
 
   <link href="https://piknik.cc/favicon.ico" type="image/x-icon" rel="icon" />
 
@@ -17,40 +20,9 @@
 <body>
   <div id="app">
     <v-app id="inspire">
-      <v-parallax class="hero" src="https://embeddable.piknik.cc/img/demo/hero-image.jpg">
+      <v-parallax class="hero"
+        src="https://cdn.jsdelivr.net/gh/sjasik/embeddable.piknik.cc@latest/img/demo/hero-image.jpg">
         <v-container class="d-flex" style="height: 100%">
-          <v-row align-self="start" class="px-3 mt-2" style="position: absolute">
-            <v-col cols="auto" class="text-left align-self-top">
-              <!-- <v-btn
-                  rounded
-                  x-small
-                  outlined
-                  color="white"
-                  href="https://vasastranka.sk/"
-                >
-                  <v-icon left>mdi-arrow-left</v-icon>
-                  Domov
-                </v-btn> -->
-              <!-- <v-icon color="white" small>mdi-arrow-left</v-icon>
-                <span class="subtitle-2">Domov</span> -->
-            </v-col>
-            <!-- <v-col cols="auto" class="align-self-top">
-                <img
-                  src="https://starakotolna.sk/wp-content/uploads/thegem-logos/logo_f77e0f482f7a28bacdd27f1d9e307654_1x.png"
-                  width="128"
-                  alt="piknik.cc logo"
-                  class="ml-4"
-                />
-              </v-col> -->
-          </v-row>
-
-          <!-- <img
-              src="https://starakotolna.sk/wp-content/uploads/thegem-logos/logo_f77e0f482f7a28bacdd27f1d9e307654_1x.png"
-              width="96"
-              alt="piknik.cc logo"
-              class="logo mt-4"
-            /> -->
-
           <v-col cols="12" align-self="end" class="text-left mb-16">
             <h1 class="mb-4 text-h2 text-lg-h1 font-weight-bold">
               Trojka reštaurácia & pub
@@ -65,7 +37,6 @@
         </v-container>
       </v-parallax>
 
-      <!-- Piknik -->
       <v-container fluid>
         <piknik-embeddable restaurant_id="60350601682a90eac21d63d5" default_language="sk" primary_color="#5C0019"
           floating_button="true" agreements_url="/podmienky"></piknik-embeddable>
@@ -84,8 +55,6 @@
                   <v-col class="text-left white--text mr-8">
                     <span class="overline font-weight-bold">Kontakt</span>
                     <p class="body-2">
-                      <!-- <a href="https://vasastranka.sk/" target="_blank"
-                        class="text-decoration-none white--text">vasastranka.sk</a><br /> -->
                       <a href="mailto:trojka.restauracia@gmail.com"
                         class="text-decoration-none white--text">trojka.restauracia@gmail.com</a><br />
                       <a href="tel:0948 269 089" class="text-decoration-none white--text">0948 269 0891</a><br>
@@ -119,14 +88,6 @@
                       </v-tooltip>
                     </p>
                   </v-col>
-                  <!-- <v-col class="text-left white--text mr-8">
-                    <span class="overline font-weight-bold">Donáška & platba</span>
-                    <p class="body-2">
-                      Vyzdvihnutie / donáška<br />
-                      Platba pri prevzatí (hotovosť / karta)<br />
-                      Platba kartou online<br />
-                    </p>
-                  </v-col> -->
                   <v-col class="text-left white--text">
                     <span class="overline font-weight-bold">Donáškové zóny</span>
                     <p class="body-2">
@@ -146,7 +107,8 @@
               <v-col class="text-left white--text align-self-center" md="6" cols="12">
                 <span class="mr-3">zo ♥ vytvoril</span>
                 <a href="http://piknik.cc" target="_blank" rel="noopener noreferrer">
-                  <img src="https://piknik.cc/images/piknik-logo-white.svg" width="72" alt="Piknik.cc logo" />
+                  <img src="https://cdn.jsdelivr.net/gh/sjasik/piknik.cc@latest/images/piknik-logo-white.svg" width="72"
+                    alt="Piknik.cc logo" />
                 </a>
               </v-col>
               <v-spacer></v-spacer>
@@ -168,6 +130,8 @@
       vuetify: new Vuetify({}),
     });
   </script>
+
+  <script src="https://cdn.jsdelivr.net/gh/sjasik/embeddable.piknik.cc@latest/js/app.js"></script>
 
   <style>
     /* Selection */
@@ -217,7 +181,5 @@
     }
   </style>
 </body>
-
-<script src="https://cdn.jsdelivr.net/gh/sjasik/embeddable.piknik.cc@latest/js/app.js"></script>
 
 </html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+
+  <link href="https://piknik.cc/favicon.ico" type="image/x-icon" rel="icon" />
+
+  <link href="https://cdn.jsdelivr.net/gh/sjasik/embeddable.piknik.cc@latest/css/app.css" rel="stylesheet" />
+
+  <script src="https://js.stripe.com/v3/"></script>
+</head>
+
+<body>
+  <div id="app">
+    <v-app id="inspire">
+      <v-parallax class="hero" src="https://embeddable.piknik.cc/img/demo/hero-image.jpg">
+        <v-container class="d-flex" style="height: 100%">
+          <v-row align-self="start" class="px-3 mt-2" style="position: absolute">
+            <v-col cols="auto" class="text-left align-self-top">
+              <!-- <v-btn
+                  rounded
+                  x-small
+                  outlined
+                  color="white"
+                  href="https://vasastranka.sk/"
+                >
+                  <v-icon left>mdi-arrow-left</v-icon>
+                  Domov
+                </v-btn> -->
+              <!-- <v-icon color="white" small>mdi-arrow-left</v-icon>
+                <span class="subtitle-2">Domov</span> -->
+            </v-col>
+            <!-- <v-col cols="auto" class="align-self-top">
+                <img
+                  src="https://starakotolna.sk/wp-content/uploads/thegem-logos/logo_f77e0f482f7a28bacdd27f1d9e307654_1x.png"
+                  width="128"
+                  alt="piknik.cc logo"
+                  class="ml-4"
+                />
+              </v-col> -->
+          </v-row>
+
+          <!-- <img
+              src="https://starakotolna.sk/wp-content/uploads/thegem-logos/logo_f77e0f482f7a28bacdd27f1d9e307654_1x.png"
+              width="96"
+              alt="piknik.cc logo"
+              class="logo mt-4"
+            /> -->
+
+          <v-col cols="12" align-self="end" class="text-left mb-16">
+            <h1 class="mb-4 text-h2 text-lg-h1 font-weight-bold">
+              Trojka reštaurácia & pub
+            </h1>
+            <h4 class="text-subtitle-1 mb-2">
+              Malokarpatské námestie 3, 84103 Bratislava
+            </h4>
+            <v-btn rounded small outlined color="white" href="#more-info">
+              Viac informácií
+            </v-btn>
+          </v-col>
+        </v-container>
+      </v-parallax>
+
+      <!-- Piknik -->
+      <v-container fluid>
+        <piknik-embeddable restaurant_id="60350601682a90eac21d63d5" default_language="sk" primary_color="#5C0019"
+          floating_button="true" agreements_url="/podmienky"></piknik-embeddable>
+      </v-container>
+
+      <v-footer padless id="more-info" color="#5C0019">
+        <v-container fluid>
+          <v-container>
+            <v-row no-gutters class="my-4">
+              <v-col class="text-left white--text" cols="12">
+                <h4 class="text-h4 font-weight-bold mb-2">Informácie</h4>
+              </v-col>
+
+              <v-col cols="12">
+                <div class="scroller no-scrollbar">
+                  <v-col class="text-left white--text mr-8">
+                    <span class="overline font-weight-bold">Kontakt</span>
+                    <p class="body-2">
+                      <!-- <a href="https://vasastranka.sk/" target="_blank"
+                        class="text-decoration-none white--text">vasastranka.sk</a><br /> -->
+                      <a href="mailto:trojka.restauracia@gmail.com"
+                        class="text-decoration-none white--text">trojka.restauracia@gmail.com</a><br />
+                      <a href="tel:0948 269 089" class="text-decoration-none white--text">0948 269 0891</a><br>
+
+                    </p>
+                  </v-col>
+                  <v-col class="text-left white--text mr-8">
+                    <span class="overline font-weight-bold">Adresa</span>
+                    <p class="body-2">
+                      <a href="https://goo.gl/maps/htAiq3ACorZV7knY9" target="_blank" rel="noopener noreferrer"
+                        class="text-decoration-none white--text">Malokarpatské námestie 3<br />
+                        84103 Bratislava</a><br>
+                    </p>
+                  </v-col>
+                  <v-col class="text-left white--text mr-8">
+                    <span class="overline font-weight-bold">Otváracie hodiny</span>
+                    <p class="body-2">
+                      Pracovné dni 11:00 - 20:00<br />
+                      Víkend 11:00 - 20:00<br />
+                      <v-tooltip top>
+                        <template v-slot:activator="{ on, attrs }">
+                          <span v-bind="attrs" v-on="on">Zobraraziť všetko</span>
+                        </template>
+                        <v-list-item-subtitle>Pondelok 11:00 - 20:00</v-list-item-subtitle>
+                        <v-list-item-subtitle>Utorok 11:00 - 20:00</v-list-item-subtitle>
+                        <v-list-item-subtitle>Streda 11:00 - 20:00</v-list-item-subtitle>
+                        <v-list-item-subtitle>Štvrtok 11:00 - 20:00</v-list-item-subtitle>
+                        <v-list-item-subtitle>Piatok 11:00 - 20:00</v-list-item-subtitle>
+                        <v-list-item-subtitle>Sobota 11:00 - 20:00</v-list-item-subtitle>
+                        <v-list-item-subtitle>Nedeľa 11:00 - 20:00</v-list-item-subtitle>
+                      </v-tooltip>
+                    </p>
+                  </v-col>
+                  <!-- <v-col class="text-left white--text mr-8">
+                    <span class="overline font-weight-bold">Donáška & platba</span>
+                    <p class="body-2">
+                      Vyzdvihnutie / donáška<br />
+                      Platba pri prevzatí (hotovosť / karta)<br />
+                      Platba kartou online<br />
+                    </p>
+                  </v-col> -->
+                  <v-col class="text-left white--text">
+                    <span class="overline font-weight-bold">Donáškové zóny</span>
+                    <p class="body-2">
+                      Lamač 0 €<br />
+                      <v-tooltip top>
+                        <template v-slot:activator="{ on, attrs }">
+                          <span v-bind="attrs" v-on="on">Zobraraziť všetko</span>
+                        </template>
+                        <v-list-item-subtitle>Lamač 0 €</v-list-item-subtitle>
+                      </v-tooltip>
+                    </p>
+                  </v-col>
+                </div>
+              </v-col>
+            </v-row>
+            <v-row no-gutters class="my-4">
+              <v-col class="text-left white--text align-self-center" md="6" cols="12">
+                <span class="mr-3">zo ♥ vytvoril</span>
+                <a href="http://piknik.cc" target="_blank" rel="noopener noreferrer">
+                  <img src="https://piknik.cc/images/piknik-logo-white.svg" width="72" alt="Piknik.cc logo" />
+                </a>
+              </v-col>
+              <v-spacer></v-spacer>
+              <v-col class="text-right white--text align-self-center d-none d-md-flex ml-2" cols="auto">
+                © {{ new Date().getFullYear() }} Všetky práva vyhradené Trojka
+              </v-col>
+            </v-row>
+          </v-container>
+        </v-container>
+      </v-footer>
+    </v-app>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.js"></script>
+  <script>
+    new Vue({
+      el: "#app",
+      vuetify: new Vuetify({}),
+    });
+  </script>
+
+  <style>
+    /* Selection */
+    ::-moz-selection {
+      color: #fff;
+      background: #5C0019;
+    }
+
+    ::selection {
+      color: #fff;
+      background: #5C0019;
+    }
+
+    /* Hero image */
+    .v-parallax .v-parallax__image-container {
+      filter: brightness(0.8) grayscale(0.1);
+    }
+
+    .hero img.logo {
+      position: absolute;
+    }
+
+    /* Footer - horizontal scroll */
+    .scroller {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      overflow: auto;
+      white-space: nowrap;
+      align-items: start;
+      display: flex;
+    }
+
+    .scroller div {
+      display: inline-block;
+      width: auto;
+    }
+
+    .no-scrollbar {
+      scrollbar-width: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+</body>
+
+<script src="https://cdn.jsdelivr.net/gh/sjasik/embeddable.piknik.cc@latest/js/app.js"></script>
+
+</html>

@@ -4,7 +4,6 @@
 <head>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet" />
-  <!-- <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet" /> -->
   <link href="https://cdn.jsdelivr.net/npm/vuetify@2.5.x/dist/vuetify.min.css" rel="stylesheet" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
 
@@ -12,6 +11,9 @@
   <meta name="description" content="Objednajte si jedlo jednoducho online." />
 
   <link href="https://piknik.cc/favicon.ico" type="image/x-icon" rel="icon" />
+
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#b30030" />
 
   <link href="https://cdn.jsdelivr.net/gh/sjasik/embeddable.piknik.cc@latest/css/app.css" rel="stylesheet" />
 
@@ -133,6 +135,16 @@
   </script>
 
   <script src="https://cdn.jsdelivr.net/gh/sjasik/embeddable.piknik.cc@latest/js/app.js"></script>
+
+  <script>
+    window.onload = () => {
+      "use strict";
+
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("./sw.js");
+      }
+    };
+  </script>
 
   <style>
     /* Selection */
